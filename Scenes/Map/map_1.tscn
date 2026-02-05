@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdrfomsn8kb0m"]
+[gd_scene load_steps=14 format=3 uid="uid://cdrfomsn8kb0m"]
 
 [ext_resource type="Texture2D" uid="uid://cynf61dj4x05f" path="res://Assets/Environment/Tilesets/terrainTiles_default.png" id="1_q1kr3"]
 [ext_resource type="Texture2D" uid="uid://covr57bocd760" path="res://Assets/Environment/Props/crateMetal.png" id="2_bb80e"]
@@ -121,37 +121,36 @@ texture_region_size = Vector2i(64, 64)
 6:1/0/terrains_peering_bit/left_side = 0
 6:1/0/terrains_peering_bit/top_side = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bb80e"]
+texture = ExtResource("4_yjh2d")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5u18t"]
+texture = ExtResource("5_skqv5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjh2d"]
+texture = ExtResource("3_5u18t")
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_skqv5"]
+texture = ExtResource("2_bb80e")
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_bb80e"]
 tile_size = Vector2i(64, 64)
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_2u6rp")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n2y6q"]
-texture = ExtResource("2_bb80e")
-texture_region_size = Vector2i(64, 64)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qlbpd"]
-texture = ExtResource("3_5u18t")
-texture_region_size = Vector2i(64, 64)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7p7p"]
-texture = ExtResource("4_yjh2d")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2uuhc"]
-texture = ExtResource("5_skqv5")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_cxldf"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_n2y6q")
-sources/1 = SubResource("TileSetAtlasSource_qlbpd")
-sources/2 = SubResource("TileSetAtlasSource_y7p7p")
-sources/3 = SubResource("TileSetAtlasSource_2uuhc")
+sources/1 = SubResource("TileSetAtlasSource_bb80e")
+sources/2 = SubResource("TileSetAtlasSource_5u18t")
+sources/3 = SubResource("TileSetAtlasSource_yjh2d")
+sources/4 = SubResource("TileSetAtlasSource_skqv5")
 
 [node name="Map1" type="Node2D"]
 
@@ -163,9 +162,4 @@ layer_0/tile_data = PackedInt32Array(-1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607
 [node name="TowerExclusion" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bb80e")
 format = 2
-layer_0/tile_data = PackedInt32Array(458754, 65536, 0, 393218, 65536, 0, 327682, 196608, 1, 262148, 65536, 0, 327684, 262144, 0, 393220, 65536, 0, 262157, 65536, 0, 196621, 65536, 0, 131085, 65536, 0, 65549, 196608, 1, 65550, 131072, 0, 65551, 131072, 0, 65552, 131072, 0, 65553, 131072, 0, 65554, 131072, 0, 196627, 327680, 1, 196628, 131072, 0, 196629, 131072, 0, 196612, 65536, 0, 131076, 196608, 1, 393225, 65536, 0, 327689, 196608, 0, 196617, 65536, 0, 131081, 262144, 1, 65555, 262144, 1, 131091, 65536, 0, 196630, 393216, 1, 327693, 393216, 1, 327692, 131072, 0, 327690, 131072, 0, 327691, 131072, 0, 262153, 65536, 0, 524290, 393216, 1, 524289, 131072, 0, 524288, 131072, 0, 589823, 131072, 0, 589822, 131072, 0, 589821, 327680, 1, 131077, 131072, 0, 131078, 131072, 0, 131079, 131072, 0, 131080, 131072, 0, 458756, 327680, 1, 458757, 131072, 0, 458758, 131072, 0, 458759, 131072, 0, 458760, 131072, 0, 458761, 393216, 1, 327683, 131072, 0)
-
-[node name="Props" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_cxldf")
-format = 2
-layer_0/tile_data = PackedInt32Array(524293, 2, 0, 393224, 2, 0, 458762, 2, 0, 393223, 3, 0, 262149, 3, 0, 196611, 3, 0, 458753, 3, 0, 65547, 3, 0, 393230, 3, 0, 589841, 3, 0, 262162, 3, 0, 19, 3, 0, 65539, 3, 0)
+layer_0/tile_data = PackedInt32Array(458754, 65536, 0, 393218, 65536, 0, 327682, 196608, 1, 262148, 65536, 0, 327684, 262144, 0, 393220, 65536, 0, 262157, 65536, 0, 196621, 65536, 0, 131085, 65536, 0, 65549, 196608, 1, 65550, 131072, 0, 65551, 131072, 0, 65552, 131072, 0, 65553, 131072, 0, 65554, 131072, 0, 196627, 327680, 1, 196628, 131072, 0, 196629, 131072, 0, 196612, 65536, 0, 131076, 196608, 1, 393225, 65536, 0, 327689, 196608, 0, 196617, 65536, 0, 131081, 262144, 1, 65555, 262144, 1, 131091, 65536, 0, 196630, 393216, 1, 327693, 393216, 1, 327692, 131072, 0, 327690, 131072, 0, 327691, 131072, 0, 262153, 65536, 0, 524290, 393216, 1, 524289, 131072, 0, 524288, 131072, 0, 589823, 131072, 0, 589822, 131072, 0, 589821, 327680, 1, 131077, 131072, 0, 131078, 131072, 0, 131079, 131072, 0, 131080, 131072, 0, 458756, 327680, 1, 458757, 131072, 0, 458758, 131072, 0, 458759, 131072, 0, 458760, 131072, 0, 458761, 393216, 1, 327683, 131072, 0, 655360, 1, 0, 393216, 1, 0, 65537, 1, 0, 65542, 1, 0, 262155, 1, 0, -65520, 1, 0, 393235, 1, 0, 655378, 1, 0, 589835, 1, 0, 655368, 1, 0, 327687, 1, 0, 393224, 2, 0, 589830, 2, 0, 589827, 2, 0, 131075, 2, 0, -65530, 2, 0, 13, 2, 0, -65518, 2, 0, 327697, 2, 0, 589838, 2, 0, 524304, 2, 0, 458765, 2, 0, 327686, 2, 0, 458766, 4, 0, 262159, 4, 0, 196618, 4, 0, 196615, 4, 0, 327680, 4, 0, 655362, 4, 0, 3, 4, 0, 18, 4, 0, 524307, 4, 0, 524298, 3, 0, 589836, 3, 0, 655375, 3, 0, 524294, 3, 0, 458755, 3, 0, 196609, 3, 0, 10, 3, 0, 16, 3, 0, 196625, 3, 0, 589841, 3, 0)
