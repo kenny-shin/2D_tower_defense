@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://covr57bocd760"
-path="res://.godot/imported/crateMetal.png-df877b87d5c1914ea78efc89a4ed69ec.ctex"
+uid="uid://dyvr0c3m7jf15"
+path="res://.godot/imported/towerDefense_tile228.png-e0ba21668edce5d030fbd7d970e1f64c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Props/crateMetal.png"
-dest_files=["res://.godot/imported/crateMetal.png-df877b87d5c1914ea78efc89a4ed69ec.ctex"]
+source_file="res://Assets/Towers/towerDefense_tile228.png"
+dest_files=["res://.godot/imported/towerDefense_tile228.png-e0ba21668edce5d030fbd7d970e1f64c.ctex"]
 
 [params]
 
