@@ -1,17 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh0lupq4vxu1b"]
+[gd_scene load_steps=4 format=3 uid="uid://dh0lupq4vxu1b"]
 
 [ext_resource type="Texture2D" uid="uid://da5638t1q8yu0" path="res://Assets/Towers/towerDefense_tile180.png" id="1_3axga"]
-[ext_resource type="Texture2D" uid="uid://dtslo7oleq54i" path="res://Assets/Towers/towerDefense_tile249.png" id="2_vyj8k"]
+[ext_resource type="Script" uid="uid://u7hp5gl52k4g" path="res://Scenes/Turrets/gunT1.gd" id="1_vyj8k"]
+[ext_resource type="Texture2D" uid="uid://bari04oqk1nq2" path="res://Assets/Towers/towerDefense_tile249.png" id="2_vyj8k"]
 
 [node name="GunT1" type="Node2D"]
+script = ExtResource("1_vyj8k")
 
 [node name="Base" type="Sprite2D" parent="."]
 texture = ExtResource("1_3axga")
 
 [node name="Turret" type="Sprite2D" parent="."]
-rotation = 1.5707964
 texture = ExtResource("2_vyj8k")
-offset = Vector2(0, -12)
+offset = Vector2(10, 0)
 
 [node name="Muzzle" type="Marker2D" parent="Turret"]
-position = Vector2(0, -43)
+position = Vector2(43, 0)
